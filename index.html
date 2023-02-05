@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webengage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="leftside">
+        <img src="img/pic1.jpeg" alt="pic" />
+      </div>
+      <div class="rightside">
+        <div class="logimgas">
+          <img src="img/logo.png" width="220px" height="100px" alt="logo" />
+          <h2>Get a FREE</h2>
+          <h5>consultation with an wxpert</h5>
+        </div>
+        <div>
+          <form id="form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email"
+              pattern=".+@gmail.com"
+              size="30"
+              required
+            />
+            <br />
+            <br />
+            <input
+              type="number"
+              id="phone"
+              placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              size="10"
+              required
+            />
+            <!-- <input type="submit"> -->
+            <br />
+            <input id="button" type="submit" value="TALK TO US 🡪" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // const phoneinputfiled = document.querySelector("#phone");
+    // const phoneinput = window.intlTelInput(phoneinputfiled,{utilsScript:
+    //     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"})
+    //     const mobile = document.querySelector("#phone");
+
+    //     form.addEventListener("submit", () =>{
+    //     event.preventDefault();
+    //     location.href =
+    //       "thank.html?email=" +
+    //       email.value +
+    //       "&mobile=" +
+    //       phone.value ;
+    //   });
+
+    // Validate mobile
+    // if (phone.value.length !== 10) {
+    //    alert("You have entered an invalid Mobile number")
+    //   return;
+    // } else {
+    //  alert("Succefull")
+    // }
+
+    const form = document.querySelector('#form')
+    const email = document.querySelector('#email')
+    const phone = document.querySelector('#phone')
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+      if (phone.value.length !== 10) {
+        alert('You have entered an invalid Mobile number')
+        return
+      }
+      if (!email.value.match(/.+@gmail.com/)) {
+        alert('You have entered an invalid email address')
+        return
+      }
+      location.href =
+        'thank.html?email=' + email.value + '&mobile=' + phone.value
+    })
+
+    const phoneinputfiled = document.querySelector('#phone')
+    window.intlTelInput(phoneinputfiled, {
+      utilsScript:
+        'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+    })
+  </script>
+</html>

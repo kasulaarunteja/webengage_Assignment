@@ -1,0 +1,73 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  /* border: 1px solid yellow; */
+}
+
+/* .leftside {
+  border: 1px solid green;
+} */
+
+.leftside > img {
+  width: 100%;
+  height: 120%;
+}
+
+h2 {
+  font-size: 40px;
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+h5 {
+  font-size: 25px;
+  margin-top: -30px;
+  font-weight: bolder;
+}
+
+#email {
+  width: 90%;
+  height: 30px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#phone {
+  width: 134%;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 19px;
+  
+}
+
+.logimgas{
+  text-align: center;
+}
+
+.rightside {
+  /* border: 1px solid red; */
+  padding-left: 10px;
+  padding-top: 100px;
+}
+.rightside > div > img {
+  width: 80%;
+  height: 40%;
+}
+
+#button {
+  margin-top: 30px;
+  width: 95%;
+  height: 45px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  border: transparent;
+}
+
+
+@media (max-width: 600px) {
+  
+}
