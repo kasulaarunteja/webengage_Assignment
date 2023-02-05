@@ -68,6 +68,41 @@ h5 {
 }
 
 
-@media (max-width: 600px) {
+.main2{
+  width: 60%;
+  height: 45%;
+  background-color:rgb(76, 0, 255);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin: auto;
+}
+
+@media (max-width: 650px) {
+  .main {
+    flex-direction: column;
+  }
+
+  #button {
+    margin-top: 30px;
+    width: 95%;
+    height: 45px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border: transparent;
+  }
+
+  #phone {
+    width: 134%;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 19px;
+    
+  }
   
+
 }
